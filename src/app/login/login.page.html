@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="formularioLogin" (ngSubmit)="tryLogin()">
+    <img src="./../../assets/img/img_login.png" alt="Imagen login">
+    <ion-item>
+      <ion-label position="floating">Ingrese su usuario:</ion-label>
+      <ion-input type="text" formControlName="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Ingrese su contraseña:</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block">Ingresar</ion-button>
+    <ion-progress-bar *ngIf="auth.$cargando| async" type="indeterminate"></ion-progress-bar>
+    <ion-item><ion-toggle [checked]="true">Recuerdame</ion-toggle>
+    </ion-item>
+  </form>
+</ion-content>

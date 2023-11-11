@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card *ngIf="usuarioActivo">
+    <img [src]="usuarioActivo.image">
+    <ion-card-header>
+      <ion-card-title>{{usuarioActivo.firstName}} {{usuarioActivo.lastName}}</ion-card-title>
+      <ion-card-subtitle>{{usuarioActivo.username}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-title>Contacto:</ion-card-title>
+      <ion-card-subtitle>{{usuarioActivo.email}}</ion-card-subtitle>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-button routerLink="/products" expand="block" fill="outline">ír a catalogo</ion-button>
+      <ion-button routerLink="/login" expand="block" color="danger">Salir</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
