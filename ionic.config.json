@@ -1,0 +1,7 @@
+{
+  "name": "jose_munnoz_prueba2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
